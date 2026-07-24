@@ -1,0 +1,137 @@
+/* ==========================================
+            PROPERTIES PAGE
+========================================== */
+
+.properties-page{
+  min-height:100vh;
+  background:#0f0f0f;
+  color:#fff;
+}
+
+/* ==========================================
+            HEADER
+========================================== */
+
+.page-header{
+  padding:90px 20px;
+  text-align:center;
+  background:
+  linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+  url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80");
+  background-size:cover;
+  background-position:center;
+}
+
+.page-header h1{
+  font-size:clamp(2.3rem,5vw,4rem);
+  font-weight:800;
+  color:#fff;
+  margin-bottom:15px;
+}
+
+.page-header p{
+  color:#cfcfcf;
+  font-size:1.1rem;
+  max-width:650px;
+  margin:auto;
+}
+
+/* ==========================================
+            RESULTS
+========================================== */
+
+.results-info{
+  margin:35px 0;
+  padding:18px 24px;
+  border-radius:16px;
+  background:#181818;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.results-info p{
+  color:#bdbdbd;
+}
+
+.results-info strong{
+  color:#E50914;
+}
+
+/* ==========================================
+            GRID
+========================================== */
+
+.properties-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  gap:35px;
+  padding:20px 0 70px;
+}
+
+/* ==========================================
+            NO RESULT
+========================================== */
+
+.no-results{
+  text-align:center;
+  padding:60px 20px;
+  background:#181818;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+}
+
+.no-results p{
+  color:#bcbcbc;
+  font-size:1rem;
+  margin:10px 0;
+}
+
+/* ==========================================
+            RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.page-header{
+  padding:70px 20px;
+}
+
+.page-header h1{
+  font-size:2.3rem;
+}
+
+.page-header p{
+  font-size:1rem;
+}
+
+.results-info{
+  padding:16px;
+}
+
+.properties-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;   /* 25px se 35-40px kar do */
+    padding:20px 0;
+}
+
+}
+
+@media(max-width:480px){
+
+.page-header{
+  padding:60px 15px;
+}
+
+.page-header h1{
+  font-size:1.9rem;
+}
+
+.page-header p{
+  font-size:.95rem;
+}
+
+.no-results{
+  padding:40px 15px;
+}
+
+}

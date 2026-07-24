@@ -1,0 +1,488 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* =========================================
+        RESET
+========================================= */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+html,
+body,
+#root{
+    width:100%;
+    min-height:100%;
+}
+
+:root{
+
+    --primary:#e50914;
+    --primary-hover:#c40010;
+
+    --bg:#090909;
+    --bg2:#111111;
+    --card:#181818;
+
+    --white:#ffffff;
+    --text:#e5e5e5;
+    --muted:#a0a0a0;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow:
+        0 15px 45px rgba(0,0,0,.45);
+
+    --red-shadow:
+        0 12px 30px rgba(229,9,20,.30);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+}
+
+/* =========================================
+        BODY
+========================================= */
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(229,9,20,.08),
+        transparent 30%),
+
+        linear-gradient(
+        180deg,
+        #111,
+        #090909);
+
+    color:var(--white);
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+/* =========================================
+        SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#e50914;
+
+    border-radius:30px;
+
+}
+
+/* =========================================
+        TYPOGRAPHY
+========================================= */
+
+h1{
+
+    font-size:clamp(3rem,6vw,4.8rem);
+
+    font-weight:800;
+
+    line-height:1.05;
+
+}
+
+h2{
+
+    font-size:clamp(2.2rem,5vw,3.2rem);
+
+    font-weight:800;
+
+}
+
+h3{
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+}
+
+h4{
+
+    font-size:1.25rem;
+
+    font-weight:700;
+
+}
+
+p{
+
+    color:var(--muted);
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:var(--transition);
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+/* =========================================
+        CONTAINER
+========================================= */
+
+.container{
+
+    width:min(1280px,92%);
+
+    margin:auto;
+
+}
+
+/* =========================================
+        BUTTONS
+========================================= */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:14px 30px;
+
+    border-radius:999px;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:linear-gradient(
+        135deg,
+        #ff3a5c,
+        #e50914);
+
+    color:white;
+
+    box-shadow:var(--red-shadow);
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.btn-secondary{
+
+    background:#222;
+
+    color:white;
+
+}
+
+.btn-secondary:hover{
+
+    background:#2f2f2f;
+
+}
+
+.btn-outline{
+
+    background:transparent;
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* =========================================
+        CARD
+========================================= */
+
+.card{
+
+    background:rgba(255,255,255,.04);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* =========================================
+        INPUTS
+========================================= */
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    border:1px solid var(--border);
+
+    background:#161616;
+
+    color:white;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    border-color:#e50914;
+
+}
+
+/* =========================================
+        SECTION
+========================================= */
+
+section{
+
+    padding:90px 0;
+
+}
+
+/* =========================================
+        UTILITIES
+========================================= */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.mt-2{
+
+    margin-top:20px;
+
+}
+
+.mt-4{
+
+    margin-top:40px;
+
+}
+
+.mb-2{
+
+    margin-bottom:20px;
+
+}
+
+.mb-4{
+
+    margin-bottom:40px;
+
+}
+
+.py-section{
+
+    padding:30px 0;
+
+}
+
+.grid{
+
+    display:grid;
+
+    gap:30px;
+
+}
+
+.grid-2{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.grid-3{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+.flex{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.flex-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.flex-col{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* =========================================
+        RESPONSIVE
+========================================= */
+
+@media(max-width:992px){
+
+.grid-2,
+.grid-3{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:768px){
+
+h1{
+
+font-size:2.4rem;
+
+}
+
+h2{
+
+font-size:2rem;
+
+}
+
+section{
+
+padding:70px 0;
+
+}
+
+.container{
+
+width:94%;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:480px){
+
+h1{
+
+font-size:2rem;
+
+}
+
+h2{
+
+font-size:1.6rem;
+
+}
+
+p{
+
+font-size:15px;
+
+}
+
+}

@@ -1,0 +1,30 @@
+/* ==============================
+            APP
+============================== */
+
+.app{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:#0f0f0f;
+  color:#fff;
+}
+
+.app-main{
+    flex:1;
+    margin-top:0;
+    padding-top:0;
+}
+
+/* Smooth Scrolling */
+
+html{
+  scroll-behavior:smooth;
+}
+
+/* Better Selection */
+
+::selection{
+  background:#E50914;
+  color:#fff;
+}

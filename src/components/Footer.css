@@ -1,0 +1,433 @@
+/* ===========================================
+                FOOTER
+=========================================== */
+
+.footer{
+
+position:relative;
+padding: 10px;
+margin-top:50px;
+
+background:
+linear-gradient(
+180deg,
+#141414 0%,
+#0d0d0d 60%,
+#050505 100%);
+
+color:#fff;
+
+overflow:hidden;
+
+border-top:1px solid rgba(255,255,255,.06);
+
+}
+
+/* Background Glow */
+
+.footer::before{
+
+content:"";
+
+position:absolute;
+
+top:-180px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+width:600px;
+
+height:600px;
+
+border-radius:50%;
+
+background:radial-gradient(
+circle,
+rgba(229,9,20,.18),
+transparent 70%);
+
+pointer-events:none;
+
+filter:blur(60px);
+
+}
+
+/* ===========================================
+            FOOTER CONTENT
+=========================================== */
+
+.footer-content{
+
+position:relative;
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr 1fr;
+
+gap:50px;
+
+padding:80px 0;
+
+z-index:2;
+
+}
+
+/* ===========================================
+            SECTIONS
+=========================================== */
+
+.footer-section h3{
+
+font-size:32px;
+
+font-weight:800;
+
+color:#fff;
+
+margin-bottom:18px;
+
+}
+
+.footer-section h3 span{
+
+color:#E50914;
+
+}
+
+.footer-section h4{
+
+font-size:18px;
+
+font-weight:700;
+
+margin-bottom:22px;
+
+color:#fff;
+
+position:relative;
+
+display:inline-block;
+
+}
+
+.footer-section h4::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-8px;
+
+width:45px;
+
+height:3px;
+
+border-radius:50px;
+
+background:#E50914;
+
+}
+
+.footer-section p{
+
+font-size:15px;
+
+line-height:1.9;
+
+color:#a7a7a7;
+
+margin-bottom:18px;
+
+}
+
+/* ===========================================
+            LINKS
+=========================================== */
+
+.footer-section ul{
+
+list-style:none;
+
+padding:0;
+
+margin:0;
+
+}
+
+.footer-section ul li{
+
+margin-bottom:14px;
+
+}
+
+.footer-section ul li a{
+
+position:relative;
+
+display:inline-block;
+
+color:#bdbdbd;
+
+font-size:15px;
+
+transition:.35s;
+
+}
+
+.footer-section ul li a::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-3px;
+
+width:0;
+
+height:2px;
+
+background:#E50914;
+
+transition:.35s;
+
+}
+
+.footer-section ul li a:hover{
+
+color:#fff;
+
+padding-left:8px;
+
+}
+
+.footer-section ul li a:hover::before{
+
+width:100%;
+
+}
+
+/* ===========================================
+            SOCIAL
+=========================================== */
+
+.social-links{
+
+display:flex;
+
+gap:14px;
+
+margin-top:20px;
+
+}
+
+.social-links a{
+
+width:48px;
+
+height:48px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+color:#fff;
+
+font-size:18px;
+
+transition:.35s;
+
+backdrop-filter:blur(15px);
+
+}
+
+.social-links a:hover{
+
+background:#E50914;
+
+border-color:#E50914;
+
+transform:translateY(-6px) scale(1.08);
+
+box-shadow:
+
+0 18px 35px rgba(229,9,20,.35);
+
+}
+
+/* ===========================================
+            CONTACT INFO
+=========================================== */
+
+.footer-section p strong{
+
+color:#fff;
+
+font-weight:600;
+
+}
+
+/* ===========================================
+            BOTTOM
+=========================================== */
+
+.footer-bottom{
+
+position:relative;
+
+padding:24px 0;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+text-align:center;
+
+background:rgba(255,255,255,.02);
+
+backdrop-filter:blur(20px);
+
+z-index:2;
+
+}
+
+.footer-bottom p{
+
+margin:0;
+
+font-size:14px;
+
+color:#8c8c8c;
+
+letter-spacing:.5px;
+
+}
+
+/* ===========================================
+            HOVER CARD EFFECT
+=========================================== */
+
+.footer-section{
+
+transition:.35s;
+
+}
+
+.footer-section:hover{
+
+transform:translateY(-5px);
+
+}
+
+/* ===========================================
+            RESPONSIVE
+=========================================== */
+
+@media(max-width:1100px){
+
+.footer-content{
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.footer{
+
+margin-top:70px;
+
+}
+
+.footer-content{
+
+grid-template-columns:1fr;
+
+padding:60px 0;
+
+gap:35px;
+
+text-align:center;
+
+}
+
+.footer-section h4::after{
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+.social-links{
+
+justify-content:center;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.footer-content{
+
+padding:50px 0;
+
+}
+
+.footer-section h3{
+
+font-size:26px;
+
+}
+
+.footer-section h4{
+
+font-size:17px;
+
+}
+
+.footer-section p{
+
+font-size:14px;
+
+}
+
+.social-links a{
+
+width:44px;
+
+height:44px;
+
+font-size:16px;
+
+}
+
+.footer-bottom{
+
+padding:18px 0;
+
+}
+
+.footer-bottom p{
+
+font-size:13px;
+
+}
+
+}

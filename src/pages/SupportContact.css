@@ -1,0 +1,171 @@
+.support-contact{
+  min-height:100vh;
+  background:#0f0f0f;
+  color:#fff;
+}
+
+/* Header */
+
+.page-header{
+  padding:90px 20px;
+  text-align:center;
+  background:
+  linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+  url("https://images.unsplash.com/photo-1522708323590-d24dbb6b026?auto=format&fit=crop&w=1800&q=80");
+  background-size:cover;
+  background-position:center;
+}
+
+.page-header h1{
+  font-size:clamp(2.3rem,5vw,4rem);
+  color:#fff;
+  margin-bottom:15px;
+}
+
+.page-header p{
+  color:#c9c9c9;
+}
+
+/* Layout */
+
+.contact-content{
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:35px;
+  padding:60px 0;
+}
+
+.contact-info h2,
+.contact-form-wrapper h2{
+  color:#fff;
+  margin-bottom:25px;
+  border-left:5px solid #E50914;
+  padding-left:15px;
+}
+
+/* Cards */
+
+.info-card{
+  background:#181818;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:22px;
+  margin-bottom:20px;
+  transition:.35s;
+}
+
+.info-card:hover{
+  transform:translateY(-6px);
+  border-color:#dbc6c7;
+}
+
+.info-card h3{
+  color:#fff;
+  margin-bottom:10px;
+}
+
+.info-card p,
+.hours-list li,
+.desc{
+  color:#f3f1f1;
+}
+
+.info-card a{
+  color:#ff5268;
+  text-decoration:none;
+}
+
+/* Form */
+
+.contact-form-wrapper{
+  background:#181818;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px;
+  padding:30px;
+}
+
+.success-message{
+  background:#12351d;
+  color:#67ff96;
+  border-left:4px solid #22c55e;
+  padding:14px;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+.form-group label{
+  color:#fff;
+  margin-bottom:8px;
+}
+
+.form-group input,
+.form-group textarea{
+  background:#111;
+  color:#fff;
+  border:1px solid #333;
+  border-radius:12px;
+  padding:14px;
+  font-size:15px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color:#E50914;
+  box-shadow:0 0 0 3px rgba(229,9,20,.18);
+}
+
+.contact-form .btn{
+  margin-top:10px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.contact-content{
+  grid-template-columns:1fr;
+  gap:30px;
+}
+
+.page-header{
+  padding:70px 20px;
+}
+
+.page-header h1{
+  font-size:2.3rem;
+}
+
+.contact-form-wrapper{
+  padding:22px;
+}
+
+}
+
+@media(max-width:480px){
+
+.page-header{
+  padding:60px 15px;
+}
+
+.page-header h1{
+  font-size:1.9rem;
+}
+
+.info-card,
+.contact-form-wrapper{
+  padding:18px;
+}
+
+}
